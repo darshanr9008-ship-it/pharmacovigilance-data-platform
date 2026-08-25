@@ -216,3 +216,36 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- PV Data Platform additions ---
+ 
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+ 
+# Secrets / credentials — must NEVER be committed
+*.json
+!package.json
+!**/test-fixtures/*.json
+*.pem
+*.key
+.env
+.env.*
+service-account*.json
+credentials/
+ 
+# Local dev
+.DS_Store
+*.log
+.vscode/
+.idea/
+ 
+# Airflow local metadata
+airflow.db
+airflow.cfg
+ 
+# Data files (synthetic data generation outputs — keep generators, not generated bulk output)
+data/generated/
